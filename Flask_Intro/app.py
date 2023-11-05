@@ -10,6 +10,10 @@ def index():
 def profile():
     return render_template('profile.html')
 
+@app.route('/contact')
+def contacts():
+    return render_template('contact.html')
+
 @app.route('/works')
 def my_works():
     return render_template('works.html')
