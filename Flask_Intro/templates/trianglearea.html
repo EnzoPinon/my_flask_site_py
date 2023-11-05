@@ -11,15 +11,11 @@
         <form action="/trianglearea" method="post">
             <label for="theBase">Provide the Base:</label>
             <input type="text" id="theBase" name="theBase">
-            <input type="submit" value="Calculate">
-        </form>
-        
-        <form action="/trianglearea" method="post">
             <label for="theHeight">Provide the Height:</label>
             <input type="text" id="theHeight" name="theHeight">
             <input type="submit" value="Calculate">
         </form>
-
+        
          {% if result == "valueError" %}
             <p>Input is invalid. Please add a number, not a string.</p>
         {%endif%}

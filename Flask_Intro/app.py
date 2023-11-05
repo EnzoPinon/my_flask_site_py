@@ -34,6 +34,25 @@ def compute():
         
     return render_template('areaofcircle.html', result=result)
 
+@app.route('/trianglearea', methods=['GET', 'POST'])
+def calculate():
+    result = None
+    if request.method == 'POST':
+        my_base = request.form.get('theBase', '')
+        my_height = request.form.get('theHeight', '')
+        try:
+            base_stringed = float(my_base)
+            height_stringed = float(my_height)
+        except(ValueError):
+            result = "valueError"
+            return render_template('trianglearea.html', result=result)
+        base_stringed = float(my_base)
+        height_stringed = float(my_height)
+        powered = base_stringed * height_stringed
+        result = powered / 2
+        
+    return render_template('trianglearea.html', result=result)
+
 @app.route('/contact')
 def contact():
     return "Contact Page. please create me an html page with dummy contact info"
