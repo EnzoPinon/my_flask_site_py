@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Area of a Circle</title>
+    </head>
+    <body>
+        <h1>
+            Computes for the area of the Circle.
+        </h1>
+
+        <form action="/areaofcircle" method="post">
+            <label for="theRadius">Provide the radius:</label>
+            <input type="text" id="theRadius" name="theRadius">
+            <input type="submit" value="Calculate">
+        </form>
+
+         {% if result == "valueError" %}
+            <p>Input is invalid. Please add a number, not a string.</p>
+        {%endif%}
+         {% if result != None %}
+          {% if result != "valueError"%}
+            <p>Area calculated: {{ result }}</p>
+            {%endif%}
+        {%endif%}
+    </body>
+</html>
