@@ -10,6 +10,10 @@ def index():
 def profile():
     return render_template('profile.html')
 
+@app.route('/works')
+def my_works():
+    return render_template('works.html')
+
 @app.route('/touppercase', methods=['GET', 'POST'])
 def works():
     result = None
